@@ -1,0 +1,150 @@
+
+
+.About{
+    padding-top: 100px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: white;
+}
+
+.aboutushead {
+   font-size: 30px;
+   text-align: center;
+   padding-bottom: 20px;
+   color: red;
+}
+
+.title{
+    color: red;
+    font-size: 30px;
+}
+
+/*para 1*/
+
+.para1 {
+    display: grid;
+    padding: 0;  
+    padding: 20px;
+    /* border: 2px solid red;  */
+}
+.para1>.para1Img{
+    width: 314px;
+    
+}
+.para1>.para1Img > img {
+    width: 100%;
+    grid-area: 1 / 1/ 3/ 3;
+    border-radius: 20px;
+}
+
+.para1text {
+    grid-area: 1/ 3;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 20px;
+
+}
+
+.p1{
+    grid-area: 2 / 3;;
+    margin: 0;
+}
+
+/*para2*/
+
+.para2>.para2text{
+    padding-right: 20px;
+}
+.para2>.para2text>.title{
+    padding-right: 20px;
+    color: red;
+    font-size: 30px;
+}
+.para2>.para2text>p{
+    padding-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+
+.para2 {
+    /* display: grid; */
+    display: flex;
+    padding: 20px;
+    font-size: 20px;
+    padding-right: 20px;
+    /* border: 2px solid red; */
+    margin-inline: 40px;
+}
+.para2>.para2Img{
+    width: 156%;
+    
+}
+
+
+.para2>.para2Img> img {
+    width: 100%;
+    grid-area: 1/ 3/ 3/ 3;
+    border-radius: 20px;
+}
+
+/*para3*/
+
+.para3 {
+    display: grid;
+    padding: 20px;   
+    font-size: 20px;
+    margin-inline: 40px;
+    /* border: 2px solid red; */
+}
+.para3>.para3Img{
+    width: 314px;
+    
+}
+.para3>.para3Img > img {
+    width: 220px;
+    grid-area: 1 / 1/ 3/ 3;
+    border-radius: 20px;
+}
+
+.para3text {
+    grid-area: 1/ 3;
+    padding-left: 20px;
+    padding-bottom: 90px;
+    margin: 0;
+    font-size: 20px;
+}
+.para3>.para3text>p{
+    padding-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+
+/*para4*/
+
+.para4 {
+    /* display: grid; */
+    display: flex;
+    padding: 20px;   
+    font-size: 22px;
+    margin-inline: 40px;
+}
+.para4>.para4text{
+    padding-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    padding-top: 36px;
+}
+.para4>.para4text>p{
+    padding-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+.para4>.para4Img{
+    width: 314px;
+    
+}
+.para4>.para4Img>img {
+    width: 220px;
+    grid-area: 1 / 2/ 3/ 2;
+    border-radius: 20px;
+}

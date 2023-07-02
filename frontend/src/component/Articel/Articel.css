@@ -1,0 +1,101 @@
+
+.Articles {
+    color: white;
+    padding: 20px;
+}
+
+.articelhead {
+    text-align: center;
+    color: red;
+    padding-top: 70px;
+    font-size: 32px;
+}
+
+.title1{
+    font-size: 25px;
+    padding: 20px;
+    position: relative;
+}
+
+.title1::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 0px;
+    border: 2px solid red;
+    bottom: 0px;
+    left: 2px;
+    width: 710px;
+}
+
+.title2{
+    font-size: 25px;
+    padding: 20px;
+    position: relative;
+}
+
+.title2::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 0px;
+    border: 2px solid red;
+    bottom: 0px;
+    left: -11px;
+    width: 604px;
+}
+
+.title3{
+    font-size: 25px;
+    padding: 20px;
+    position: relative;
+}
+
+.title3::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 0px;
+    border: 2px solid red;
+    bottom: 0px;
+    left: -9px;
+    width: 669px;
+}
+
+
+
+ .date{
+    font-size: 14px;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.content {
+    justify-content: left;
+    font-size: 18px;
+    padding-top: 30px;
+
+}
+
+
+h3{
+    color: red;
+}
+
+p{
+    padding: 5px;
+}
+
+
+.para1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.img1{
+    width: 750px;
+    padding-top: 40px;
+}

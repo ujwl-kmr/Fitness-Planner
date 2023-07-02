@@ -1,0 +1,77 @@
+.custom_plandiv{
+    color: white;
+    padding: 30px;
+    padding-top: 80px;
+}
+
+.custom_plandiv> .heading{
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    padding: 30px;
+}
+
+.custom_plandiv> .form{
+    padding-left: 200px;
+    padding-right: 40px;
+    font-size: 22px;
+}
+
+.custom_plandiv> .form> p{
+    color: red;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.custom_plandiv> .form> .age{
+   width: 50px;
+   height: 30px;
+   background-color: whitesmoke;
+   border-radius: 5px;
+   text-align: center;
+}
+
+.custom_plandiv> .form> .textbox{
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px;
+    width: 50px;
+    font-size: 18px;
+}
+
+.custom_plandiv> .form> .fat{
+    width: 80px;
+    height: 30px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+ }
+
+ .custom_plandiv> .form> .tag{
+    color: red;
+ }
+
+ .custom_plandiv> .form> .textarea{
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 600px;
+    height: 100px;
+ }
+
+ .custom_plandiv> .form> .form-group button {
+    height: 42px;
+    font-size: 18px;
+    outline: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid red;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding: 8px;
+    background-color: red;
+    color: #ffffff;
+    border-radius: 6px;
+}

@@ -1,0 +1,179 @@
+
+h5{
+    color: aliceblue;
+}
+.admin>.adminContent{
+
+    border: 2px solid red;
+    width: 93%;
+    margin: auto;
+    padding-block: 50px;
+    border-radius: 8px;
+    padding-inline: 40px;
+}
+.admin>.adminContent>.allreq{
+    display: flex;
+    justify-content: center;
+    column-gap: 66px;
+}
+.admin>.adminContent>.userName{
+    text-align: center;
+    color: #d9d9d9;
+    font-size:37px;
+    margin-top: -23px;
+    margin-bottom: 20px;
+    /* color: #eb2f06; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ; */
+}
+.admin>.adminContent>.userName>p{
+  
+    color: #eb2f06;
+}
+.admin>.adminContent>.allreq>.left{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.admin>.adminContent>.allreq>.right{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+   
+}
+.admin>.adminContent>.allreq>.left>.gen{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.left>.gen>h3{
+
+   padding-right:30px;
+        font-size: 27px;
+}
+
+.admin>.adminContent>.allreq>.left>.age{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.left>.age>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.left>.height{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.left>.height>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.left>.weight{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.left>.weight>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.left>.active{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.left>.active>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.left>.fat{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.left>.fat>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+
+.admin>.adminContent>.allreq>.right>.situation{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.right>.situation>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.right>.phys{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.right>.phys>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.right>.time{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.right>.time>h3{
+    font-size: 27px;
+    padding-right:30px;
+}
+.admin>.adminContent>.allreq>.right>.Place{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.right>.Place>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.right>.prevent{
+
+    display: flex;
+        align-items: baseline;
+        font-size: 31px;
+}
+.admin>.adminContent>.allreq>.right>.prevent>h3{
+padding-right:30px;
+    font-size: 27px;
+}
+.admin>.adminContent>.allreq>.right>button{
+
+    height: 42px;
+        width: 57%;
+        font-size: 18px;
+        color: #d9d9d9;
+        background: red;
+        outline: none;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-top: 12px;
+        border: 2px solid red;
+        transition: all 0.3s ease-in-out;
+}
+
+.admin>.adminContent>.allreq>.right>button:hover{
+    background: none;
+    color: #eb2f06;
+
+}
