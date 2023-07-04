@@ -3,9 +3,12 @@ import "../Articel/Articel.css"
 import img1 from "../Articel/images/articel1.jpg"
 import img2 from "../Articel/images/articel2.jpg"
 import img3 from "../Articel/images/articel3.jpg"
+import Usernav from '../Navbar/Usernav'
+import Footer from '../Footer/Footer'
 function Articel() {
     return (
         <>
+            <Usernav />
             <section class="Articles" id="Articles">
                 <div class="articelhead">
                     <h1>Articles</h1>
@@ -81,7 +84,7 @@ function Articel() {
                     </div>
                 </div>
                 <div class="para1">
-                    <h2 class="title2">Title: The Importance of a Balanced Diet for Optimal Health <br/><p class="date">June 20, 2023</p></h2>
+                    <h2 class="title2">Title: The Importance of a Balanced Diet for Optimal Health <br /><p class="date">June 20, 2023</p></h2>
                     <img class="img1" src={img2} alt="" />
                     <div class="content">
                         <h3> Introduction:</h3>
@@ -150,80 +153,80 @@ function Articel() {
                     </div>
                 </div>
                 <div class="para1">
-                <h2 class="title3">Title: The Role of Supplementation: Enhancing Health and Wellness <br/><p class="date">June 30, 2023</p></h2>
-                <img class="img1" src={img1} alt=""/>
-                <div class="content">
-                    <h3> Introduction:</h3>
-                    <p>In today's fast-paced world, where our dietary habits may not always meet our nutritional needs,
-                        dietary supplementation has gained popularity as a means to bridge the nutritional gap.
-                        Supplements are products designed to provide essential vitamins, minerals, herbs, or other
-                        beneficial substances that may be lacking in our regular diet. In this article, we will explore
-                        the role of supplementation in supporting overall health and wellness.
-                    </p>
+                    <h2 class="title3">Title: The Role of Supplementation: Enhancing Health and Wellness <br /><p class="date">June 30, 2023</p></h2>
+                    <img class="img1" src={img1} alt="" />
+                    <div class="content">
+                        <h3> Introduction:</h3>
+                        <p>In today's fast-paced world, where our dietary habits may not always meet our nutritional needs,
+                            dietary supplementation has gained popularity as a means to bridge the nutritional gap.
+                            Supplements are products designed to provide essential vitamins, minerals, herbs, or other
+                            beneficial substances that may be lacking in our regular diet. In this article, we will explore
+                            the role of supplementation in supporting overall health and wellness.
+                        </p>
 
-                    <h3>Understanding Dietary Supplementation:</h3>
-                    <p>Dietary supplements come in various forms, including capsules, tablets, powders, and liquids.
-                        They are intended to supplement, not replace, a healthy diet. Supplements can target specific
-                        nutrients or offer a combination of vitamins, minerals, or other beneficial compounds. It is
-                        important to note that while supplementation can be beneficial, it is always recommended to
-                        consult with a healthcare professional before starting any new regimen.
-                    </p>
+                        <h3>Understanding Dietary Supplementation:</h3>
+                        <p>Dietary supplements come in various forms, including capsules, tablets, powders, and liquids.
+                            They are intended to supplement, not replace, a healthy diet. Supplements can target specific
+                            nutrients or offer a combination of vitamins, minerals, or other beneficial compounds. It is
+                            important to note that while supplementation can be beneficial, it is always recommended to
+                            consult with a healthcare professional before starting any new regimen.
+                        </p>
 
-                    <h3>Filling Nutritional Gaps:</h3>
-                    <p>Despite our best efforts, it can be challenging to obtain all the necessary nutrients solely from
-                        our diet. Factors such as busy lifestyles, restricted diets, and nutrient-depleted soils can
-                        contribute to nutritional deficiencies. Supplements can help fill these gaps by providing the
-                        body with essential vitamins, minerals, and other nutrients needed for proper functioning</p>
+                        <h3>Filling Nutritional Gaps:</h3>
+                        <p>Despite our best efforts, it can be challenging to obtain all the necessary nutrients solely from
+                            our diet. Factors such as busy lifestyles, restricted diets, and nutrient-depleted soils can
+                            contribute to nutritional deficiencies. Supplements can help fill these gaps by providing the
+                            body with essential vitamins, minerals, and other nutrients needed for proper functioning</p>
 
-                    <h3>Targeted Nutritional Support:</h3>
-                    <p>Supplements are often used to address specific nutritional needs or support certain health
-                        conditions. For example, individuals with vitamin D deficiency may benefit from vitamin D
-                        supplements, while pregnant women might require additional folic acid for fetal development.
-                        Supplements like omega-3 fatty acids can support heart health, and probiotics aid in maintaining
-                        a healthy gut microbiome. Targeted supplementation can play a valuable role in supporting
-                        overall well-being.</p>
+                        <h3>Targeted Nutritional Support:</h3>
+                        <p>Supplements are often used to address specific nutritional needs or support certain health
+                            conditions. For example, individuals with vitamin D deficiency may benefit from vitamin D
+                            supplements, while pregnant women might require additional folic acid for fetal development.
+                            Supplements like omega-3 fatty acids can support heart health, and probiotics aid in maintaining
+                            a healthy gut microbiome. Targeted supplementation can play a valuable role in supporting
+                            overall well-being.</p>
 
-                    <h3>Supporting Active Lifestyles:</h3>
-                    <p>For individuals leading active lifestyles, supplementation can be particularly beneficial.
-                        Athletes and fitness enthusiasts often have increased nutrient requirements due to higher energy
-                        expenditure and tissue repair needs. Supplements like protein powders can aid in muscle recovery
-                        and growth, while electrolyte supplements help replenish minerals lost through sweating.
-                        Additionally, supplements containing antioxidants may support the body's defense against
-                        oxidative stress associated with intense physical activity.</p>
+                        <h3>Supporting Active Lifestyles:</h3>
+                        <p>For individuals leading active lifestyles, supplementation can be particularly beneficial.
+                            Athletes and fitness enthusiasts often have increased nutrient requirements due to higher energy
+                            expenditure and tissue repair needs. Supplements like protein powders can aid in muscle recovery
+                            and growth, while electrolyte supplements help replenish minerals lost through sweating.
+                            Additionally, supplements containing antioxidants may support the body's defense against
+                            oxidative stress associated with intense physical activity.</p>
 
-                    <h3>Age-Related Nutritional Needs:</h3>
-                    <p>As we age, our nutrient requirements may change. Older adults may face challenges in meeting
-                        their nutritional needs due to reduced appetite, medication interactions, or age-related
-                        nutrient absorption issues. Supplements that target specific deficiencies, such as calcium and
-                        vitamin D for bone health or B vitamins for cognitive function, can be particularly valuable for
-                        older individuals.</p>
+                        <h3>Age-Related Nutritional Needs:</h3>
+                        <p>As we age, our nutrient requirements may change. Older adults may face challenges in meeting
+                            their nutritional needs due to reduced appetite, medication interactions, or age-related
+                            nutrient absorption issues. Supplements that target specific deficiencies, such as calcium and
+                            vitamin D for bone health or B vitamins for cognitive function, can be particularly valuable for
+                            older individuals.</p>
 
-                    <h3>Importance of Quality and Safety:</h3>
-                    <p>When considering supplementation, it is crucial to prioritize quality and safety. Choose
-                        reputable brands that adhere to good manufacturing practices and third-party testing to ensure
-                        product quality and purity. Always read product labels and follow recommended dosage guidelines.
-                        Keep in mind that supplements are not a substitute for a balanced diet but are meant to
-                        complement healthy lifestyle choices.</p>
+                        <h3>Importance of Quality and Safety:</h3>
+                        <p>When considering supplementation, it is crucial to prioritize quality and safety. Choose
+                            reputable brands that adhere to good manufacturing practices and third-party testing to ensure
+                            product quality and purity. Always read product labels and follow recommended dosage guidelines.
+                            Keep in mind that supplements are not a substitute for a balanced diet but are meant to
+                            complement healthy lifestyle choices.</p>
 
-                    <h3>Consulting a Healthcare Professional:</h3>
-                    <p>Before starting any supplementation regimen, it is wise to consult with a healthcare
-                        professional, such as a doctor or registered dietitian. They can assess your specific needs,
-                        consider any existing health conditions or medications, and provide personalized guidance on
-                        supplementation.</p>
+                        <h3>Consulting a Healthcare Professional:</h3>
+                        <p>Before starting any supplementation regimen, it is wise to consult with a healthcare
+                            professional, such as a doctor or registered dietitian. They can assess your specific needs,
+                            consider any existing health conditions or medications, and provide personalized guidance on
+                            supplementation.</p>
 
-                    <h3>Conclusion:</h3>
-                    <p>Dietary supplementation can play a valuable role in supporting overall health and wellness by
-                        filling nutritional gaps, providing targeted support, and catering to specific lifestyle or
-                        age-related needs. However, it is essential to remember that supplements should never replace a
-                        balanced diet. They should be used as a complementary strategy, combined with healthy eating
-                        habits, regular physical activity, and overall well-being practices. Prioritizing quality,
-                        safety, and professional guidance ensures that supplementation can be a beneficial addition to a
-                        healthy lifestyle.</p>
+                        <h3>Conclusion:</h3>
+                        <p>Dietary supplementation can play a valuable role in supporting overall health and wellness by
+                            filling nutritional gaps, providing targeted support, and catering to specific lifestyle or
+                            age-related needs. However, it is essential to remember that supplements should never replace a
+                            balanced diet. They should be used as a complementary strategy, combined with healthy eating
+                            habits, regular physical activity, and overall well-being practices. Prioritizing quality,
+                            safety, and professional guidance ensures that supplementation can be a beneficial addition to a
+                            healthy lifestyle.</p>
+                    </div>
                 </div>
-            </div>
 
             </section>
-
+            <Footer />
 
 
 

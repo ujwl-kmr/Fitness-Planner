@@ -21,6 +21,7 @@
     color: red;
     padding: 10px;
     padding-left: 0;
+    text-align: start !important;
 }
 
 .custom_plandiv> .form> .age{
