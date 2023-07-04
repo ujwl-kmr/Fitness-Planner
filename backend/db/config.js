@@ -4,9 +4,9 @@ const { Client } = pkg;
 const db = new Client({
   host: "localhost",
   port: 5432,
-  database: "",
+  database: "FitnessPlanner",
   user: "postgres",
-  password: "",
+  password: "100794",
 });
 
 db.connect((err, client) => {

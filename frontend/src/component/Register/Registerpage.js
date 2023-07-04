@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "../Register/Registerpage.css"
+import axios from 'axios';
 function Registerpage() {
     const [name, setname] = useState("");
     const [email, setEmail] = useState("");
@@ -19,7 +20,26 @@ function Registerpage() {
     }
     const handelpasswordChange = (e) => {
         setPassword(e.target.value);
+    
     }
+
+    const handelregister = async() => {
+        console.log("cliked")
+
+        await axios.post('http://localhost:8800/user/reg', { name, email, password, number })
+            .then(response => {
+                // Handle successful authentication here
+                // dispatch(Login(true));
+            })
+            .catch(error => {
+                // Handle authentication error here
+                console.log(error);
+            });
+
+    }
+
+
+
     return (
         <>
             <div class="container">
@@ -45,7 +65,7 @@ function Registerpage() {
                             character.</small>
                     </div>
                     <div class="form-group">
-                        <button type="submit">Sign Up</button>
+                        <button type="submit" onClick={handelregister}>Sign Up</button>
                     </div>
                 </form>
             </div>
