@@ -1,0 +1,119 @@
+.Supplements {
+  background-color: black;
+  color: white;
+  margin-top: 30px;
+  padding: 70px;
+}
+
+.SupplementsHeading {
+  text-align: center;
+  color: red;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
+  padding: 30px;
+  margin: 25px;
+  width: calc(33.33% - 50px); /* Adjusted width for 3 products in a row */
+  border-radius: 20px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  display: inline-block; /* Display products in a row */
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 268px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  color: white; /* Heading text color */
+  text-align: center; /* Center the heading */
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+.product-card .price-and-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.product-card p {
+  color: white; /* Price text color */
+  font-size: 1.2em; /* Increased price font size */
+}
+
+.product-card button {
+  background-color: red; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.product-card button:hover {
+  background-color: darkred; /* Button hover background color */
+}
+
+.product-card button:disabled {
+  background-color: gray; /* Disabled button background color */
+  cursor: not-allowed;
+}
+
+.product-card button.increment,
+.product-card button.decrement {
+  font-size: 5em; /* Increased increment/decrement button font size */
+  margin: 0 5px 3px 3px; /* Add margin between buttons */
+}
+
+.product-card button.increment:hover,
+.product-card button.decrement:hover {
+  background-color: darkred; /* Increase/decrease button hover background color */
+}
+
+.cartquantity {
+  width: 43px;
+  margin-left: 45px;
+  height: 37px;
+  padding-left: 6px;
+  padding-right: 3px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.cartDelete {
+  width: 60px;
+}
+
+.totalprice {
+  text-align: right;
+  margin-right: 26px;
+  font-size: 25px;
+}
+
+.checkcon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout {
+  margin-right: 21px;
+  margin-top: 20px;
+  height: 42px;
+  width: 146px;
+  background-color: red;
+  color: white;
+  font-size: 17px;
+  border-radius: 7px;
+}

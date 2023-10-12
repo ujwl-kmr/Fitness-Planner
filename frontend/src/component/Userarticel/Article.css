@@ -4,7 +4,7 @@
     padding: 20px;
 }
 
-.articelhead {
+.articlehead {
     text-align: center;
     color: red;
     padding-top: 70px;
@@ -15,6 +15,7 @@
     font-size: 25px;
     padding: 20px;
     position: relative;
+    color: white;
 }
 
 .title1::after{
@@ -32,6 +33,7 @@
     font-size: 25px;
     padding: 20px;
     position: relative;
+    color: white;
 }
 
 .title2::after{
@@ -49,6 +51,7 @@
     font-size: 25px;
     padding: 20px;
     position: relative;
+    color: white;
 }
 
 .title3::after{
@@ -68,10 +71,11 @@
     font-size: 14px;
     padding: 10px;
     padding-left: 0;
+    text-align: left;
 }
 
 .content {
-    justify-content: left;
+    text-align: left;
     font-size: 18px;
     padding-top: 30px;
 
@@ -89,8 +93,9 @@ p{
 
 .para1 {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    text-align: left;
     flex-direction: column;
     padding: 30px;
 }

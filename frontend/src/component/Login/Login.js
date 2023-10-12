@@ -1,75 +1,126 @@
-import React, { useState } from 'react'
-import "../Login/Login.css"
-import { useNavigate } from "react-router-dom"
-import axios from 'axios';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Usernav from "../Navbar/Usernav";
+import Footer from "../Footer/Footer";
+import "./Login.css";
 
-function Login() {
-    const navigate = useNavigate()
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const gotoregisterpage = () => {
-        navigate('/Register')
-    }
-    const handelemailchange = (e) => {
-        setEmail(e.target.value)
+const Login = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
-    }
-    const handelpasswordChange = (e) => {
-        setPassword(e.target.value);
-    }
+  const handlePasswordToggle = () => {
+    setPasswordVisible((prevState) => !prevState);
+  };
 
-    const handelloginAuth = () => {
-        axios
-          .post("http://localhost:8800/user/login", { email, password })
-          .then((res) => {
-            localStorage.setItem("userId", res.data.id);
-            localStorage.setItem("userName", res.data.name);
-            localStorage.setItem("userEmail", res.data.email);
-            localStorage.setItem("userNumber", res.data.number);
-            toast.success(res.data.message, {
-                icon: "✅",
-                position: "top-center",
-                autoClose: 4000,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-              });
-            // Handle successful authentication here
-            //dispatch(Login(true));
-          })
-          .catch((error) => {
-            // Handle authentication error here
-            console.log(error);
-          });
-      };
-    return (
-        <>
-            <div className="container">
-                <h2>Login</h2>
-                <form action="" className='main'>
-                    <p>Sign in as: <label class="user" for="">User</label>
-                        <input type="radio" class="userbut" name="user"
-                            id="user" />
-                        <label class="admin">Admin</label>
-                        <input type="radio" class="adminbut" name="user" id="user" /> </p>
-                    <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required value={email} onChange={handelemailchange} />
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required value={password} onChange={handelpasswordChange} />
-                        <p onClick={gotoregisterpage} style={{cursor:"pointer"}}>Not Registered? Click to sign up</p>
-                        <div class="form-group">
-                            <button class="login" type="submit" onClick={handelloginAuth}>Login</button>
-                        </div>
-                    </div>
-                </form>
+  const goToRegisterPage = () => {
+    navigate("/Register");
+  };
 
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLoginAuth = (e) => {
+    console.log(email, password);
+    e.preventDefault();
+    axios
+      .post("http://localhost:8800/auth/login", { email, password })
+      .then((res) => {
+        localStorage.setItem("userId", res.data.user._id);
+        localStorage.setItem("userName", res.data.user.name);
+        localStorage.setItem("userEmail", res.data.user.email);
+        localStorage.setItem("userNumber", res.data.user.phone);
+        navigate("/");
+        toast.success("Login Successful", {
+          icon: "✅",
+          position: "top-center",
+          autoClose: 4000,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Invalid credentials", {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      });
+  };
+
+  return (
+    <>
+      <Usernav />
+      <div className="container">
+        <h2>User Login</h2>
+        <form className="main">
+          <div className="form-group">
+            <label htmlFor="username">Email Address:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              value={email}
+              onChange={handleEmailChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type={passwordVisible ? "text" : "password"}
+              id="password"
+              name="password"
+              required
+              value={password}
+              onChange={handlePasswordChange}
+            />
+            <span
+              onClick={handlePasswordToggle}
+              style={{
+                position: "relative",
+                top: "-32px",
+                color: "black",
+                right: "-330px",
+                zIndex: "3",
+              }}
+            >
+              {passwordVisible ? (
+                <i className="far fa-eye-slash"></i>
+              ) : (
+                <i className="far fa-eye"></i>
+              )}
+            </span>
+            <p onClick={goToRegisterPage} style={{ cursor: "pointer" }}>
+              Not Registered? Click to sign up
+            </p>
+            <div className="form-group">
+              <button className="login" type="submit" onClick={handleLoginAuth}>
+                Login
+              </button>
             </div>
-        </>
-    )
-}
+          </div>
+        </form>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-export default Login
+export default Login;

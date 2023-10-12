@@ -1,6 +1,11 @@
 import React from 'react'
 import "../Footer/Footer.css"
+import { useNavigate } from 'react-router-dom'
 function Footer() {
+    const navigate=useNavigate();
+    const adminLogin=()=>{
+navigate('/adminLogin')
+    }
     return (
         <>
             <footer>
@@ -47,6 +52,7 @@ function Footer() {
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-youtube"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <button className='Owner_login' onClick={adminLogin}>Admin login</button>
                             </div>
                         </form>
 
@@ -57,6 +63,7 @@ function Footer() {
                             <p>Copyright © 2023 <a href="#">FitnessPlanner</a> All rights reserved</p>
                         </div>
                     </div>
+                    
                 </div>
             </footer>
         </>

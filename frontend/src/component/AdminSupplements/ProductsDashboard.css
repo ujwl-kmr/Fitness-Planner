@@ -1,0 +1,77 @@
+.ProductsDashboard {
+  background-color: black;
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+  padding: 60px;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  border: 2px solid darkred;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  margin-left: 180px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid darkred;
+  width: 220px;
+}
+
+th {
+  background-color: red;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.edit,
+.delete,
+.AddProducts {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  margin-right: 3px;
+  margin-left: 3px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+.ProductInputs {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.ProductInputs > input,
+label {
+  color: red;
+  margin: 5px;
+  padding: 5px;
+  font-size: 17px;
+}
+
+.ProductInputs > input {
+  border-radius: 7px;
+  color: black;
+}

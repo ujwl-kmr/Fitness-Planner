@@ -18,16 +18,18 @@ h5 {
   border-radius: 8px;
   padding-inline: 40px;
   margin-top: 10px;
+  font-size: 12px;
 }
 .admin > .adminContent > .allreq {
   display: flex;
-  justify-content: center;
-  column-gap: 66px;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  gap: 13rem;
 }
 .admin > .adminContent > .userName {
   text-align: center;
   color: #d9d9d9;
-  font-size: 37px;
+  font-size: 15px;
   margin-top: -23px;
   margin-bottom: 20px;
   /* color: #eb2f06; */
@@ -44,13 +46,14 @@ h5 {
   flex-direction: column;
   row-gap: 30px;
   /* border: 2px solid red; */
-  width: 50%;
+  max-width: 30%;
   /* align-items: center; */
 }
 .admin > .adminContent > .allreq > .right {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  max-width:40% ;
 }
 .admin > .adminContent > .allreq > .left > .gen {
   display: flex;
@@ -77,7 +80,7 @@ h5 {
   font-size: 31px;
 }
 .admin > .adminContent > .allreq > .left > .height > h3 {
-  padding-right: 30px;
+  padding-right: 20px;
   font-size: 27px;
 }
 .admin > .adminContent > .allreq > .left > .weight {
@@ -86,7 +89,7 @@ h5 {
   font-size: 31px;
 }
 .admin > .adminContent > .allreq > .left > .weight > h3 {
-  padding-right: 30px;
+  padding-right: 15px;
   font-size: 27px;
 }
 
@@ -96,7 +99,7 @@ h5 {
   font-size: 31px;
 }
 .admin > .adminContent > .allreq > .left > .fat > h3 {
-  padding-right: 30px;
+  padding-right: 50px;
   font-size: 27px;
 }
 
@@ -117,6 +120,7 @@ h5 {
 .admin > .adminContent > .allreq > .right > .active {
   display: flex;
   /* align-items: center; */
+  gap: 48px;
   font-size: 31px;
   justify-content: space-between;
 }
@@ -130,7 +134,7 @@ h5 {
 }
 .admin > .adminContent > .allreq > .right > .phys {
   display: flex;
-  /* align-items: center; */
+ gap: 22px;
   font-size: 31px;
   justify-content: space-between;
 }
@@ -143,11 +147,13 @@ h5 {
   text-align: justify;
 }
 .admin > .adminContent > .allreq > .rightmostpart {
-  width: 48%;
+
   display: flex;
   flex-direction: column;
   row-gap: 34px;
-  align-items: end;
+  /* align-items: end;
+   */
+   max-width:20% ;
 }
 .admin > .adminContent > .allreq > .rightmostpart > .time {
   display: flex;
@@ -175,6 +181,7 @@ h5 {
 }
 .admin > .adminContent > .allreq > .rightmostpart > .prevent {
   display: flex;
+  flex-direction: column;
   align-items: baseline;
   font-size: 31px;
 }
@@ -182,15 +189,19 @@ h5 {
   padding-right: 30px;
   font-size: 27px;
 }
-.admin > .adminContent > .allreq > .rightmostpart > .prevent > h5 {
-  width: 67%;
+.prevent_text{
+  color: white;
+  width: 300px;
+  word-wrap: break-word;
+  
 }
+
 .admin > .adminContent > .allreq > .rightmostpart > button {
   height: 42px;
   width: 100%;
-  font-size: 18px;
+  font-size: 10px;
   color: #d9d9d9;
-  background: red;
+  background: linear-gradient(217deg, red 100%, transparent );
   outline: none;
   border-radius: 5px;
   letter-spacing: 1px;

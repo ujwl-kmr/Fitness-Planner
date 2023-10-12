@@ -23,7 +23,7 @@ function Aboutus() {
                     </div>
                     <div class="para1text">
                         <h3 class="title">Introducing Fitness Planner: Your Ultimate Workout Plans Provider</h3>
-                        <p class="p1">Welcome to Fitness Planner, your one-stop destination for all your workout needs. Our
+                        <p class="p1" style={{textAlign:"start"}}>Welcome to Fitness Planner, your one-stop destination for all your workout needs. Our
                             website is dedicated to helping individuals achieve their fitness goals by providing personalized
                             and comprehensive workout plans. Whether you're a beginner looking to kickstart your fitness journey
                             or a seasoned athlete aiming to take your training to the next level, Fitness Planner has got you covered.
@@ -43,7 +43,7 @@ function Aboutus() {
 
                 <div class="para2text">
                     <h3 class="title">What makes us different?</h3>
-                    <p>What sets Fitness Planner apart is our commitment to customization. We believe that workouts should
+                    <p style={{textAlign:"start"}}>What sets Fitness Planner apart is our commitment to customization. We believe that workouts should
                         be tailored to an individual's specific needs and preferences. With that in mind, our website offers
                         a unique feature that enables you to customize your workout plans based on factors like fitness
                         level, available time, and specific target areas. You can select the duration of your workouts, the
@@ -65,7 +65,7 @@ function Aboutus() {
                 </div>
                 <div class="para3text">
                     <h3 class="title">Get plans that actually work!</h3>
-                    <p>At Fitness Planner, we prioritize your satisfaction and success. Our workout plans are backed by
+                    <p style={{textAlign:"start"}}>At Fitness Planner, we prioritize your satisfaction and success. Our workout plans are backed by
                         science, expertise, and real-life testimonials from individuals who have achieved remarkable results
                         through our programs. We are confident that with dedication, consistency, and the right workout plan
                         from Fitness Planner, you can reach your fitness goals and unlock your full potential.</p>
@@ -77,7 +77,7 @@ function Aboutus() {
 
                 <div class="para4text">
                     <h3 class="title">Get started now!</h3>
-                    <p>So, what are you waiting for? Get started with Fitness Planner today and embark on your transformative fitness
+                    <p style={{textAlign:"start"}}>So, what are you waiting for? Get started with Fitness Planner today and embark on your transformative fitness
                         journey. Let us be your trusted partner in achieving a healthier, fitter, and happier you!</p>
                 </div>
                 <div className="para4Img">
