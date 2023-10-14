@@ -1,5 +1,8 @@
 require("dotenv").config();
 const Razorpay = require("razorpay");
+const Cart = require("../models/cart");
+const Product = require("../models/Product");
+// const crypto = require("crypto");
 
 const instance = new Razorpay({
   key_id: process.env.KEY_ID,
@@ -9,8 +12,9 @@ const instance = new Razorpay({
 const checkout = async (req, res) => {
   try {
     const options = {
-      total: Number(req.body.total * 100),
+      amount: req.body.amount,
       currency: "INR",
+      payment_capture: 0,
     };
     const order = await instance.orders.create(options);
     res.status(200).json({
@@ -26,23 +30,56 @@ const checkout = async (req, res) => {
 };
 
 const paymentVerification = async (req, res) => {
-  const { razorpay_order_id, razorpay_payment_id } = req.body;
   try {
-    const payment = await instance.payments.fetch(razorpay_payment_id);
-    if (payment && payment.order_id === razorpay_order_id) {
-      return res
-        .status(200)
-        .json({ success: true, message: "Payment successful" });
-    } else {
-      return res
-        .status(400)
-        .json({ success: false, message: "Invalid payment" });
-    }
+    await clearCartAndProductQuantities();
+
+    return res.redirect("http://localhost:3000/Cart");
   } catch (error) {
-    console.error("Error verifying payment:", error);
+    console.error("Error processing payment:", error);
     return res
       .status(500)
-      .json({ success: false, message: "Error verifying payment" });
+      .json({ success: false, message: "Error processing payment" });
+  }
+};
+
+const clearCartAndProductQuantities = async (user_id) => {
+  try {
+    await updateProductQuantities();
+    await clearCart(user_id);
+  } catch (error) {
+    console.error(
+      "Error clearing cart and updating product quantities:",
+      error
+    );
+    throw new Error("Error clearing cart and updating product quantities");
+  }
+};
+
+const updateProductQuantities = async () => {
+  try {
+    const cartItems = await Cart.find();
+    for (const cartItem of cartItems) {
+      const product = await Product.findOne({ title: cartItem.title });
+      if (product) {
+        product.quantity -= cartItem.quantity;
+        await product.save();
+      }
+    }
+
+    console.log("Product quantities updated based on cart items");
+  } catch (error) {
+    console.error("Error updating product quantities:", error);
+    throw new Error("Error updating product quantities");
+  }
+};
+
+const clearCart = async (user_id) => {
+  try {
+    await Cart.deleteMany({ userId: user_id });
+    console.log("Cart cleared for user:");
+  } catch (error) {
+    console.error("Error clearing cart:", error);
+    throw new Error("Error clearing cart");
   }
 };
 

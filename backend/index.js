@@ -11,6 +11,7 @@ const cartRoutes = require("./routes/cartRoute");
 const paymentRoutes = require("./routes/paymentRoute");
 const app = express();
 const cors = require("cors");
+require("dotenv").config();
 
 const PORT = process.env.PORT || 8800;
 

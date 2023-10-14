@@ -308,6 +308,7 @@ body {
 }
 .Read_more_Btn {
   display: inline-block;
+  margin-top: 1rem;
   padding: 1rem 2.8rem;
   padding-right: 3rem;
   background: linear-gradient(130deg, red 93%, transparent 90%);

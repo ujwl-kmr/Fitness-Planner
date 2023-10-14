@@ -63,8 +63,7 @@ button:hover {
   justify-content: center;
 }
 
-.ProductInputs > input,
-label {
+.ProductInputs > label {
   color: red;
   margin: 5px;
   padding: 5px;
@@ -74,4 +73,7 @@ label {
 .ProductInputs > input {
   border-radius: 7px;
   color: black;
+  margin: 5px;
+  padding: 5px;
+  font-size: 17px;
 }

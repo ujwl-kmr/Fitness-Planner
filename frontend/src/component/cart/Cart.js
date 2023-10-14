@@ -11,6 +11,28 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [productDetails, setProductDetails] = useState({});
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+  // const [totalAmount, setTotalAmount] = useState(0);
+
+  useEffect(() => {
+    if (isLoggedIn()) {
+      const userId = localStorage.getItem("userId");
+      axios
+        .get(`http://localhost:8800/cart/${userId}`)
+        .then((response) => {
+          setCartItems(response.data);
+          fetchProductDetails();
+        })
+        .catch((error) => console.error("Error fetching cart items:", error));
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const handleProceedToCheckout = () => {
     setIsCheckoutOpen(true);
@@ -21,31 +43,30 @@ const Cart = () => {
   };
 
   // const handleProceedToPayment = (formData) => {
-  const checkoutHandler = async (total) => {
+  const checkoutHandler = async () => {
     const {
       data: { key },
     } = await axios.get("http://localhost:8800/api/getkey");
 
-    const {
-      data: { order },
-    } = await axios.post("http://localhost:8800/api/checkout", {
-      total,
+    const { data } = await axios.post("http://localhost:8800/api/checkout", {
+      amount: totalAmount,
     });
+    console.log(totalAmount);
 
     const options = {
-      key,
-      amount: order.total,
+      key: key,
+      amount: totalAmount * 100,
       currency: "INR",
       name: "Fitness Planner",
       description: "Purchase of Supplements",
-      image: "https://example.com/your_logo",
-      order_id: order.id,
-      callback_url: "https://localhost:8800/api/paymentverification",
+      image:
+        "https://thumbs.dreamstime.com/b/initial-letter-fp-logo-icon-isolated-white-background-simple-vector-logo-initial-letter-fp-logo-icon-isolated-white-201249388.jpg",
+      order_id: data.id,
+      callback_url: "http://localhost:8800/api/paymentverification",
       prefill: {
-        //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
-        name: "Gaurav Kumar", //your customer's name
-        email: "gaurav.kumar@example.com",
-        contact: "9000090000", //Provide the customer's phone number for better conversion rates
+        name: localStorage.getItem("userName"),
+        email: localStorage.getItem("userEmail"),
+        contact: localStorage.getItem("userNumber"),
       },
       notes: {
         address: "Razorpay Corporate Office",
@@ -56,12 +77,32 @@ const Cart = () => {
     };
 
     const razor = new window.Razorpay(options);
+    // razor.on("payment.success", async function (response) {
+    //   console.log("Payment success:", response);
+    //   await handlePaymentSuccess();
+    // });
+
     razor.open();
   };
 
-  //   console.log("Proceeding to payment with form data:", formData);
-  //   // Close the modal after proceeding to payment
-  //   setIsCheckoutOpen(false);
+  // const handlePaymentSuccess = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "http://localhost:8800/api/paymentverification",
+  //       {
+  //         method: "POST",
+  //       }
+  //     );
+
+  //     const data = await response.json();
+  //     if (data.success && data.redirectUrl) {
+  //       window.location.href = data.redirectUrl;
+  //     } else {
+  //       console.error("Payment was successful, but unable to redirect.");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error processing payment:", error);
+  //   }
   // };
 
   const fetchProductDetails = () => {
@@ -79,19 +120,6 @@ const Cart = () => {
       );
   };
 
-  useEffect(() => {
-    if (isLoggedIn()) {
-      const userId = localStorage.getItem("userId");
-      axios
-        .get(`http://localhost:8800/cart/${userId}`)
-        .then((response) => {
-          setCartItems(response.data);
-          fetchProductDetails();
-        })
-        .catch((error) => console.error("Error fetching cart items:", error));
-    }
-  }, []);
-
   const calculateTotalPrice = () => {
     let total = 0;
     for (const item of cartItems) {
@@ -102,6 +130,8 @@ const Cart = () => {
     }
     return total;
   };
+
+  const totalAmount = calculateTotalPrice();
 
   const handleQuantityChange = (index, newQuantity) => {
     const updatedCartItems = cartItems.map((item, i) => {
@@ -180,9 +210,7 @@ const Cart = () => {
                     </div>
                   </div>
                 ))}
-                <p className="totalprice">
-                  Total Price: ₹{calculateTotalPrice()}
-                </p>
+                <p className="totalprice">Total Price: ₹{totalAmount}</p>
                 <div className="checkcon">
                   <button
                     className="checkout"

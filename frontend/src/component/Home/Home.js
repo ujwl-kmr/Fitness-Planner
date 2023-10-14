@@ -143,15 +143,15 @@ function Home() {
               <div className="box2con box2con2">
                 <h3>
                   <i className="fas fa-check"></i>
-                  <span>Monthly new plan</span>
+                  <span>Get various supplements</span>
                 </h3>
                 <p>
-                  At Fitness Planner, we believe in constantly innovating and
-                  keeping things fresh for our users. That's why we regularly
-                  introduce monthly new plans to elevate your fitness
-                  experience. Each month, we bring you exciting workout
-                  routines, curated challenges, and refreshing nutrition plans
-                  to keep you motivated and engaged.
+                  We understand the role of good supplements in fitness,
+                  therefore Fitness Planner offers a wide range of supplements
+                  tailored to meet various fitness goals and dietary needs.
+                  Whether you're aiming to build muscle, improve endurance, lose
+                  weight, or enhance overall wellness, Fitness Planner likely
+                  has products to support your objectives
                 </p>
               </div>
             </div>

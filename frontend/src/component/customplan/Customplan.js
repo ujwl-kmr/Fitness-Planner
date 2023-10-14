@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import './Customplan.css';
-import Usernav from '../Navbar/Usernav';
-import Footer from '../Footer/Footer';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
+import React, { useState } from "react";
+import "./Customplan.css";
+import Usernav from "../Navbar/Usernav";
+import Footer from "../Footer/Footer";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 function Customplan() {
-  const [gender, setGender] = useState('');
-  const [age, setAge] = useState('');
-  const [height, setHeight] = useState('');
-  const [weight, setWeight] = useState('');
-  const [active, setActive] = useState('');
-  const [fat, setFat] = useState('');
-  const [situation, setSituation] = useState('');
-  const [physique, setPhysique] = useState('');
-  const [time, setTime] = useState('');
-  const [place, setPlace] = useState('');
-  const [prevention, setPrevention] = useState('');
-  const [email, setEmail] =useState('');
+  const [gender, setGender] = useState("");
+  const [age, setAge] = useState("");
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+  const [active, setActive] = useState("");
+  const [fat, setFat] = useState("");
+  const [situation, setSituation] = useState("");
+  const [physique, setPhysique] = useState("");
+  const [time, setTime] = useState("");
+  const [place, setPlace] = useState("");
+  const [prevention, setPrevention] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleGenderChange = (e) => {
     setGender(e.target.value);
@@ -70,7 +70,7 @@ function Customplan() {
 
   const handleSubmit = () => {
     const formData = {
-      user_id: localStorage.getItem('userId'),
+      user_id: localStorage.getItem("userId"),
       gender,
       age,
       height,
@@ -84,36 +84,36 @@ function Customplan() {
       prevention,
       email,
       status: false,
-      response: '',
+      response: "",
     };
 
     axios
-      .post('http://localhost:8800/userDetail/details', formData)
+      .post("http://localhost:8800/userDetail/details", formData)
       .then((response) => {
-        console.log('Data uploaded successfully:', response.data);
-        toast.success('Submitted Successfully', {
-          position: 'top-center',
+        console.log("Data uploaded successfully:", response.data);
+        toast.success("Submitted Successfully", {
+          position: "top-center",
           autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
           draggable: true,
           progress: undefined,
-          theme: 'dark',
+          theme: "dark",
         });
         window.location.reload();
       })
       .catch((error) => {
-        console.error('Error uploading data:', error);
+        console.error("Error uploading data:", error);
       });
   };
 
   return (
     <>
       <Usernav />
-      {console.log('inside custom plan')}
+      {console.log("inside custom plan")}
       <div className="custom_plandiv">
-       <h1 className="heading">
+        <h1 className="heading">
           Fill out the form below and get your custom plan now!
         </h1>
         <div className="form">
@@ -135,9 +135,8 @@ function Customplan() {
             onChange={handleGenderChange}
           />
           <label htmlFor="female">Female</label>
-
-          <br /><br />
-
+          <br />
+          <br />
           <p style={{ textAlign: "start", color: "red" }}>What is your age?</p>
           <select
             className="age"
@@ -147,7 +146,6 @@ function Customplan() {
             onChange={handleAgeChange}
             value={age}
           >
-
             {/* Remaining age options */}
 
             <option value="Age">Age</option>
@@ -211,11 +209,12 @@ function Customplan() {
             <option value="73">73</option>
             <option value="74">74</option>
             <option value="75">75</option>
-
           </select>
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red" }}>What is your height?(in cms)</p>
+          <br />
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            What is your height?(in cms)
+          </p>
           <input
             className="textbox"
             type="number"
@@ -223,12 +222,13 @@ function Customplan() {
             required
             onChange={handleHeightChange}
             value={height}
-            placeholder='cms'
+            placeholder="cms"
           />
-
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red" }}>What is your weight?</p>
+          <br />
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            What is your weight?
+          </p>
           <input
             className="textbox"
             type="text"
@@ -236,12 +236,13 @@ function Customplan() {
             required
             onChange={handleWeightChange}
             value={weight}
-            placeholder='kgs'
+            placeholder="kgs"
           />
-
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red" }}>How active are you during a typical week?</p>
+          <br />
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            How active are you during a typical week?
+          </p>
           <input
             type="radio"
             name="active"
@@ -256,7 +257,9 @@ function Customplan() {
             value="Lightly Active"
             onChange={handleActiveChange}
           />
-          <label htmlFor="">Lightly Active (Light Exercise 1-3 Days A Week)</label>
+          <label htmlFor="">
+            Lightly Active (Light Exercise 1-3 Days A Week)
+          </label>
           <br />
           <input
             type="radio"
@@ -264,7 +267,9 @@ function Customplan() {
             value="Moderately Active"
             onChange={handleActiveChange}
           />
-          <label htmlFor="">Moderately Active (Moderate Exercise 3-5 Days A Week)</label>
+          <label htmlFor="">
+            Moderately Active (Moderate Exercise 3-5 Days A Week)
+          </label>
           <br />
           <input
             type="radio"
@@ -272,7 +277,9 @@ function Customplan() {
             value="very Active"
             onChange={handleActiveChange}
           />
-          <label htmlFor="">Very Active (Intense Exercise 6-7 Days A Week)</label>
+          <label htmlFor="">
+            Very Active (Intense Exercise 6-7 Days A Week)
+          </label>
           <br />
           <input
             type="radio"
@@ -280,15 +287,22 @@ function Customplan() {
             value="Extremely Active"
             onChange={handleActiveChange}
           />
-          <label htmlFor="">Extremely Active (Intense Daily Exercise + Physical Job)</label>
+          <label htmlFor="">
+            Extremely Active (Intense Daily Exercise + Physical Job)
+          </label>
           <br />
           <br />
-
-          <p style={{ textAlign: "start", color: "red" }}>What is your body fat percentage?</p>
-
+          <p style={{ textAlign: "start", color: "red" }}>
+            What is your body fat percentage?
+          </p>
           {/* body fat  */}
-          <select class="fat" name="fat" id="fat" onChange={handleFatChange}
-            value={fat}>
+          <select
+            class="fat"
+            name="fat"
+            id="fat"
+            onChange={handleFatChange}
+            value={fat}
+          >
             <option value="">Body Fat</option>
             <option value="5">5</option>
             <option value="6">6</option>
@@ -327,95 +341,187 @@ function Customplan() {
             <option value="39">39</option>
             <option value="40">40</option>
           </select>
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red" }}>Which Of The Following Best Describes Your Current Situation?</p>
-          {/* situation  */}
-          <input type="radio" name="situation" id="situation" onChange={handleSituationChange}
-            value='I have a low amount of body fat and want to put on muscle.' />
-          <label for="">I have a low amount of body fat and want to put on muscle.</label> <br />
-          <input type="radio" name="situation" id="situation"  onChange={handleSituationChange}
-            value='I am “skinny fat”. I need to build muscle but there’s still fat covering my abs.'/>
-          <label for="">I'm “skinny fat”. I need to build muscle but there’s still fat covering my abs.</label> <br />
-          <input type="radio" name="situation" id="situation" onChange={handleSituationChange}
-            value='I have decent muscle development but still need to lose a bit of fat.'/>
-          <label for="">I have decent muscle development but still need to lose a bit of fat.</label> <br />
-          <input type="radio" name="situation" id="situation" onChange={handleSituationChange}
-            value='I have high body fat and want to lean down first and foremost.'/>
-          <label for="">I have high body fat and want to lean down first and foremost.</label>
-
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red" }}>What would you consider to be your ultimate “ideal” physique?</p>
-
-          {/* current physic  */}
-          <input type="radio" name="physique" id="physique" onChange={handlePhysiqueChange}
-            value='I want to achieve a nice balance between both muscularity and
-            leanness' />
-          <label for=""><b>“Aesthetic”</b> – I want to achieve a nice balance between both muscularity and
-            leanness.</label><br />
-          <input type="radio" name="physique" id="physique" onChange={handlePhysiqueChange}
-            value='I want to be as big and muscular as possible and don’t mind slightly higher
-            body fat' />
-          <label for=""><b>“Bulky”</b> – I want to be as big and muscular as possible and don’t mind slightly higher
-            body fat.</label><br />
-          <input type="radio" name="physique" id="physique" onChange={handlePhysiqueChange}
-            value='I am not concerned with being super lean and muscular. I just want to look fit
-              and healthy '/>
-          <label for=""><b>“Fit”</b> – I’m not concerned with being super lean and muscular. I just want to look fit
-            and healthy.</label>
           <br />
-
-          <p style={{ textAlign: "start", color: "red" }}>Do You Have At Least 1 Year Of Consistent, Proper Lifting Under Your Belt?</p>
-
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            Which Of The Following Best Describes Your Current Situation?
+          </p>
+          {/* situation  */}
+          <input
+            type="radio"
+            name="situation"
+            id="situation"
+            onChange={handleSituationChange}
+            value="I have a low amount of body fat and want to put on muscle."
+          />
+          <label for="">
+            I have a low amount of body fat and want to put on muscle.
+          </label>{" "}
+          <br />
+          <input
+            type="radio"
+            name="situation"
+            id="situation"
+            onChange={handleSituationChange}
+            value="I am “skinny fat”. I need to build muscle but there’s still fat covering my abs."
+          />
+          <label for="">
+            I'm “skinny fat”. I need to build muscle but there’s still fat
+            covering my abs.
+          </label>{" "}
+          <br />
+          <input
+            type="radio"
+            name="situation"
+            id="situation"
+            onChange={handleSituationChange}
+            value="I have decent muscle development but still need to lose a bit of fat."
+          />
+          <label for="">
+            I have decent muscle development but still need to lose a bit of
+            fat.
+          </label>{" "}
+          <br />
+          <input
+            type="radio"
+            name="situation"
+            id="situation"
+            onChange={handleSituationChange}
+            value="I have high body fat and want to lean down first and foremost."
+          />
+          <label for="">
+            I have high body fat and want to lean down first and foremost.
+          </label>
+          <br />
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            What would you consider to be your ultimate “ideal” physique?
+          </p>
+          {/* current physic  */}
+          <input
+            type="radio"
+            name="physique"
+            id="physique"
+            onChange={handlePhysiqueChange}
+            value="I want to achieve a nice balance between both muscularity and
+            leanness"
+          />
+          <label for="">
+            <b>“Aesthetic”</b> – I want to achieve a nice balance between both
+            muscularity and leanness.
+          </label>
+          <br />
+          <input
+            type="radio"
+            name="physique"
+            id="physique"
+            onChange={handlePhysiqueChange}
+            value="I want to be as big and muscular as possible and don’t mind slightly higher
+            body fat"
+          />
+          <label for="">
+            <b>“Bulky”</b> – I want to be as big and muscular as possible and
+            don’t mind slightly higher body fat.
+          </label>
+          <br />
+          <input
+            type="radio"
+            name="physique"
+            id="physique"
+            onChange={handlePhysiqueChange}
+            value="I am not concerned with being super lean and muscular. I just want to look fit
+              and healthy "
+          />
+          <label for="">
+            <b>“Fit”</b> – I’m not concerned with being super lean and muscular.
+            I just want to look fit and healthy.
+          </label>
+          <br /> <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            Do You Have At Least 1 Year Of Consistent, Proper Lifting Under Your
+            Belt?
+          </p>
           {/* yes no  */}
-          <input type="radio" name="time" id="time" onChange={handleTimeChange}
-            value='yes' />
+          <input
+            type="radio"
+            name="time"
+            id="time"
+            onChange={handleTimeChange}
+            value="yes"
+          />
           <label for="">Yes</label> <br />
-          <input type="radio" name="time" id="time" onChange={handleTimeChange}
-            value='NO' />
+          <input
+            type="radio"
+            name="time"
+            id="time"
+            onChange={handleTimeChange}
+            value="NO"
+          />
           <label for="">No</label>
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red" }}>Where Do You Train Currently?</p>
-
+          <br />
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            Where Do You Train Currently?
+          </p>
           {/* perfer  */}
-          <input type="radio" name="place" id="place" onChange={handlePlaceChange}
-            value='Gym' />
+          <input
+            type="radio"
+            name="place"
+            id="place"
+            onChange={handlePlaceChange}
+            value="Gym"
+          />
           <label for="">Gym</label> <br />
-          <input type="radio" name="place" id="place" onChange={handlePlaceChange}
-            value='Home' />
+          <input
+            type="radio"
+            name="place"
+            id="place"
+            onChange={handlePlaceChange}
+            value="Home"
+          />
           <label for="">Home</label>
-
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red", }}>The things preventing from making progress and any suggestions.</p>
+          <br />
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            The things preventing from making progress and any suggestions.
+          </p>
           <textarea
-            style={{ resize: "none", borderRadius: "10px", fontSize: "18px", padding: "15px" }}
+            style={{
+              resize: "none",
+              borderRadius: "10px",
+              fontSize: "18px",
+              padding: "15px",
+            }}
             rows="6"
             cols="80"
             required
             onChange={handlePreventionChange}
             value={prevention}
-
           ></textarea>
-          <br /><br />
-
-          <p style={{ textAlign: "start", color: "red", }}>Enter your email to get your free custom fitness and diet plan now!</p>
-          <input className="customemail" type='email' name='email' id='email' required onChange={handleEmailChange} value={email} />
-          <br /><br />
-
-          <button className="submit-btn" onClick={handleSubmit} >
+          <br />
+          <br />
+          <p style={{ textAlign: "start", color: "red" }}>
+            Enter your email to get your free custom fitness and diet plan now!
+          </p>
+          <input
+            className="customemail"
+            type="email"
+            name="email"
+            id="email"
+            required
+            onChange={handleEmailChange}
+            value={email}
+          />
+          <br />
+          <br />
+          <button className="submit-btn" onClick={handleSubmit}>
             Submit
           </button>
-
         </div>
       </div>
       <Footer />
-
     </>
   );
 }
 
 export default Customplan;
-

@@ -1,12 +1,18 @@
 h5 {
   color: aliceblue;
 }
+
+.adminuseremail {
+  font-size: 30px;
+}
+
 .admin > .adminHeader {
   text-align: center;
   font-size: 34px;
+  margin-bottom: 25px;
 }
 .admin > .adminHeader > h3 {
-  margin-top: 53px;
+  margin-top: 65px;
 }
 .admin > .adminContent {
   box-shadow: rgb(255 138 138 / 52%) 0px 1px 3px 0px,
@@ -29,7 +35,7 @@ h5 {
 .admin > .adminContent > .userName {
   text-align: center;
   color: #d9d9d9;
-  font-size: 15px;
+  font-size: 25px;
   margin-top: -23px;
   margin-bottom: 20px;
   /* color: #eb2f06; */
@@ -38,6 +44,12 @@ h5 {
   align-items: center;
   /* ; */
 }
+
+.admin > .adminContent > .userName > h5 {
+  margin-left: 13px;
+  font-size: 23px;
+}
+
 .admin > .adminContent > .userName > p {
   color: #eb2f06;
 }
@@ -53,12 +65,12 @@ h5 {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  max-width:40% ;
+  max-width: 40%;
 }
 .admin > .adminContent > .allreq > .left > .gen {
   display: flex;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .left > .gen > h3 {
   padding-right: 14px;
@@ -68,7 +80,7 @@ h5 {
 .admin > .adminContent > .allreq > .left > .age {
   display: flex;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .left > .age > h3 {
   padding-right: 45px;
@@ -77,7 +89,7 @@ h5 {
 .admin > .adminContent > .allreq > .left > .height {
   display: flex;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .left > .height > h3 {
   padding-right: 20px;
@@ -86,7 +98,7 @@ h5 {
 .admin > .adminContent > .allreq > .left > .weight {
   display: flex;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .left > .weight > h3 {
   padding-right: 15px;
@@ -96,7 +108,7 @@ h5 {
 .admin > .adminContent > .allreq > .left > .fat {
   display: flex;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .left > .fat > h3 {
   padding-right: 50px;
@@ -106,7 +118,7 @@ h5 {
 .admin > .adminContent > .allreq > .right > .situation {
   display: flex;
   /* align-items: center; */
-  font-size: 31px;
+  font-size: 27px;
   justify-content: space-between;
 }
 .admin > .adminContent > .allreq > .right > .situation > h3 {
@@ -121,7 +133,7 @@ h5 {
   display: flex;
   /* align-items: center; */
   gap: 48px;
-  font-size: 31px;
+  font-size: 27px;
   justify-content: space-between;
 }
 .admin > .adminContent > .allreq > .right > .active > h3 {
@@ -134,8 +146,8 @@ h5 {
 }
 .admin > .adminContent > .allreq > .right > .phys {
   display: flex;
- gap: 22px;
-  font-size: 31px;
+  gap: 22px;
+  font-size: 27px;
   justify-content: space-between;
 }
 .admin > .adminContent > .allreq > .right > .phys > h3 {
@@ -147,18 +159,17 @@ h5 {
   text-align: justify;
 }
 .admin > .adminContent > .allreq > .rightmostpart {
-
   display: flex;
   flex-direction: column;
   row-gap: 34px;
   /* align-items: end;
    */
-   max-width:20% ;
+  max-width: 20%;
 }
 .admin > .adminContent > .allreq > .rightmostpart > .time {
   display: flex;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .rightmostpart > .time > h3 {
   font-size: 27px;
@@ -170,7 +181,7 @@ h5 {
 .admin > .adminContent > .allreq > .rightmostpart > .Place {
   display: flex;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .rightmostpart > .Place > h3 {
   padding-right: 30px;
@@ -183,25 +194,24 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  font-size: 31px;
+  font-size: 27px;
 }
 .admin > .adminContent > .allreq > .rightmostpart > .prevent > h3 {
   padding-right: 30px;
   font-size: 27px;
 }
-.prevent_text{
+.prevent_text {
   color: white;
   width: 300px;
   word-wrap: break-word;
-  
 }
 
 .admin > .adminContent > .allreq > .rightmostpart > button {
   height: 42px;
   width: 100%;
-  font-size: 10px;
+  font-size: 20px;
   color: #d9d9d9;
-  background: linear-gradient(217deg, red 100%, transparent );
+  background: linear-gradient(217deg, red 100%, transparent);
   outline: none;
   border-radius: 5px;
   letter-spacing: 1px;
@@ -214,4 +224,19 @@ h5 {
 .admin > .adminContent > .allreq > .rightmostpart > button:hover {
   background: none;
   color: #eb2f06;
+}
+
+.historyContent {
+  font-size: 20px;
+}
+
+.historyContent > h3 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-bottom: 20px;
+  font-size: 30px;
 }

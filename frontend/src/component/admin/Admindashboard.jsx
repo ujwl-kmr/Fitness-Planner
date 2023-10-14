@@ -123,7 +123,7 @@ function Admindashboard() {
             details.status === false && (
               <div className="adminContent" key={details.user_id}>
                 <div className="userName">
-                  <h3>Client Email:</h3>
+                  <h3>Client Email: </h3>
                   <h5>{details.email}</h5>
                 </div>
                 <div className="allreq">
@@ -207,6 +207,7 @@ function Admindashboard() {
                 width: "668px",
                 height: "317px",
                 margin: "20px",
+                marginBottom: "0px",
                 padding: "10px",
                 fontSize: "1.2rem",
               }}
